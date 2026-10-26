@@ -1,0 +1,12 @@
+{
+  "name": "builtbyjosef",
+  "owner": { "name": "Josef Yang" },
+  "metadata": { "description": "Josef Yang's builtbyjosef design system for Claude Code." },
+  "plugins": [
+    {
+      "name": "builtbyjosef-design",
+      "source": "./",
+      "description": "builtbyjosef design standard for any UI, site, document, slide, chart or artifact."
+    }
+  ]
+}

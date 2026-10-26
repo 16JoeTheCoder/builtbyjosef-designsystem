@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>builtbyjosef design system</title>
+<link rel="icon" href="../logos/tab-small.svg">
+<link rel="stylesheet" href="../index.css">
+<script>document.documentElement.classList.add("jy-js")</script>
+<script src="../jy.js" defer></script>
+<style>
+  .wrap{max-width:var(--page-max);margin-inline:auto;padding-inline:var(--space-5)}
+  .block{padding-block:var(--space-8)}
+  .row{display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-6)}
+  /* footer band is --inverse: ink in light, paper in dark, so the lockup flips with it */
+  .lk-paper{display:none}
+  :root[data-theme="dark"] .lk-ink{display:none}
+  :root[data-theme="dark"] .lk-paper{display:block}
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]) .lk-ink{display:none}
+    :root:not([data-theme="light"]) .lk-paper{display:block}
+  }
+  .foot{background:var(--inverse);color:var(--on-inverse)}
+  .top{display:flex;justify-content:space-between;align-items:center;padding-block:var(--space-5)}
+  .top img{height:48px;width:auto}
+</style>
+</head>
+<body class="jy-root">
+
+<section class="jy-stage" data-theme="dark">
+  <div class="wrap">
+    <div class="top">
+      <img src="../logos/tab-lockup-dark.svg" alt="builtbyjosef">
+      <button class="jy-btn jy-btn--ghost jy-btn--s" data-jy-theme-toggle>Switch theme</button>
+    </div>
+  </div>
+  <div class="jy-hero">
+    <p class="jy-eyebrow" data-jy-reveal style="--i:0">Design system / v1.1</p>
+    <h1 class="jy-hero__title" data-jy-reveal style="--i:1">Cool head.<br><b class="jy-burn">Hot point.</b></h1>
+    <p class="jy-hero__lead" data-jy-reveal style="--i:2">One orange point on a calm ground. Built to a standard. Built to move.</p>
+    <div class="jy-hero__actions" data-jy-reveal style="--i:3">
+      <a class="jy-btn jy-btn--accent jy-ignite" href="#system">Read the standard</a>
+      <a class="jy-btn jy-btn--ghost" href="#flare">See the flare</a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="system">
+  <div class="wrap">
+    <p class="jy-eyebrow">The Stair</p>
+    <h2 class="h1" style="margin:var(--space-2) 0 var(--space-6)"><span style="font-weight:300">Four rules.</span> One form each.</h2>
+    <div class="jy-stair">
+      <article class="jy-panel jy-panel--tab jy-panel--link" data-jy-reveal style="--i:0"><div><p class="jy-eyebrow">01</p><h3>Ma</h3></div><p>Leave deliberate space.</p></article>
+      <article class="jy-panel jy-panel--tab jy-panel--link" data-jy-reveal style="--i:1"><div><p class="jy-eyebrow">02</p><h3>Itten</h3></div><p>One orange point per view.</p></article>
+      <article class="jy-panel jy-panel--tab jy-panel--link" data-jy-reveal style="--i:2"><div><p class="jy-eyebrow">03</p><h3>Kata</h3></div><p>One fixed form per element.</p></article>
+      <article class="jy-panel jy-panel--tab jy-panel--active" data-jy-reveal style="--i:3"><div><p class="jy-eyebrow">04</p><h3>Dynamic</h3></div><p>Snap, then settle.</p></article>
+    </div>
+    <hr class="jy-rule">
+    <div class="grid3">
+      <div class="jy-stat"><span class="jy-stat__label">Peak output</span><div><span class="jy-stat__value" data-jy-count="12.4" data-jy-decimals="1">12.4</span><span class="jy-stat__unit">GWh</span></div><span class="jy-stat__delta">+3.1 vs 2025</span></div>
+      <div class="jy-stat"><span class="jy-stat__label">Capacity factor</span><div><span class="jy-stat__value" data-jy-count="38" data-jy-decimals="0">38</span><span class="jy-stat__unit">%</span></div><span class="jy-stat__delta">n = 8 760 h</span></div>
+      <div class="jy-stat"><span class="jy-stat__label">Sites modelled</span><div><span class="jy-stat__value" data-jy-count="1835" data-jy-decimals="0">1 835</span></div><span class="jy-stat__delta">source: measured</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="jy-flare block" id="flare">
+  <div class="wrap">
+    <p class="jy-eyebrow">The flare / one per page</p>
+    <h2 class="display-l" style="margin:var(--space-4) 0 var(--space-6)"><span style="font-weight:300">Spend orange</span><br><b class="jy-burn">like a flame.</b></h2>
+    <div class="row">
+      <a class="jy-btn" href="#parts">Run simulation</a>
+      <a class="jy-btn jy-btn--ghost" href="#parts">Export PDF</a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="parts">
+  <div class="wrap">
+    <div class="row" style="margin-bottom:var(--space-6)">
+      <button class="jy-btn">Primary</button>
+      <button class="jy-btn jy-btn--accent">The one action</button>
+      <button class="jy-btn jy-btn--ghost">Ghost</button>
+      <span class="jy-badge jy-badge--ok">OK</span>
+      <span class="jy-badge jy-badge--warn">Warning</span>
+      <span class="jy-badge jy-badge--bad">Failed</span>
+      <span class="jy-live">Live</span>
+    </div>
+    <div class="row" style="align-items:flex-start;gap:var(--space-7)">
+      <label class="jy-field"><span class="jy-field__label">Turbine count</span><input class="jy-field__input" placeholder="12"><span class="jy-field__help">Whole number</span></label>
+      <div style="flex:1;min-width:260px"><p class="jy-eyebrow" style="margin-bottom:var(--space-2)">Heat ramp</p><div class="jy-heat"><i></i><i></i><i></i><i></i><i></i></div></div>
+    </div>
+    <div class="jy-code" style="margin-top:var(--space-6)"><div class="jy-code__bar"><span>Ubuntu/WSL terminal</span><span>bash</span></div><pre><span class="c"># install the standard in a project</span>
+<span class="f">curl</span> -fsSL https://raw.githubusercontent.com/16JoeTheCoder/builtbyjosef-designsystem/v1/scripts/install.sh | <span class="f">bash</span></pre></div>
+    <table class="jy-table" style="margin-top:var(--space-6)">
+      <thead><tr><th>Site</th><th class="num">Output (GWh)</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td>Ingolstadt</td><td class="num">12.4</td><td><span class="jy-badge jy-badge--ok">OK</span></td></tr>
+        <tr><td>Johor</td><td class="num">9.8</td><td><span class="jy-badge jy-badge--warn">Review</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap" style="padding-block:var(--space-7)">
+    <img class="lk-ink" src="../logos/tab-lockup-dark.svg" alt="builtbyjosef" style="height:64px;width:auto">
+    <img class="lk-paper" src="../logos/tab-lockup-light.svg" alt="builtbyjosef" style="height:64px;width:auto">
+    <p class="body-s" style="margin-top:var(--space-4)">Built to a standard. Built to move.</p>
+  </div>
+</footer>
+</body>
+</html>
